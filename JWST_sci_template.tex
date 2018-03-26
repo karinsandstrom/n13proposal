@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%    JWST_sci_template.tex  (use only for JWST General Observer and Archival Research proposals)
+%
+%
+%
+%    JAMES WEBB SPACE TELESCOPE 
+%    OBSERVING PROPOSAL TEMPLATE 
+%    FOR CYCLE 1 (2017)
+%
+%    Version 1.0 September 2017.
+%
+%    Guidelines and assistance
+%    =========================
+%     Cycle 1 Announcement Web Page:
+%
+%         https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Opportunities
+%
+%    Please contact the JWST Help Desk if you need assistance with any
+%    aspect of your proposal:
+%    	    http://jwsthelp.stsci.edu
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The template begins here. Please do not modify the font size from 12 point.
+
+\documentclass[12pt]{article}
+\usepackage{jwstproposaltemplate}
+
+\begin{document}
+
+%   1. SCIENTIFIC JUSTIFICATION
+%       (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\justification          % Do not delete this command.
+% Enter your scientific justification here. 
+\noindent {\bf Overview:} Photodissociation regions (PDRs) are key components of the interstellar medium (ISM).  These regions where UV photons dominate the ionization state and heating of the gas can describe some large fraction of the mass of the ISM.  Fundamental advances in understanding PDRs were made when maps that resolve the transition between ionized, neutral and molecular gas in well-characterized regions like the Orion Bar were made possible by advances in millimeter and infrared observatories.  The Orion Bar PDR remains a benchmark for PDRs in the Milky Way that all models for these regions must reproduce.
+
+The structure of PDRs should be a strong function of metallicity. This is due to several key processes: 1) the depth to which UV photons penetrate into the column of gas is set largely by the extinction relative to N$_H$ which varies with metallicity, 2) the heating rate is set by the photoelectric effect from dust and the photoionization of metals both of which become more scarce, and 3) the cooling is determined by the abundance of heavy elements via the radiation in fine-structure transitions and molecular rotational and vibrational lines.  These three effects should greatly influence the structure of PDRs.  At low metallicity, PDRs are expected to have a larger extent (it requires more column to reach the same Av) and to have different temperature structure (depending on whether the deficit in heating from the PE effect or the deficit in cooling due to the lack of metals dominates).  As of now, no low metallicity PDR has ever been resolved in the relevant diagnostics lines to test these predictions, simply due to the inability of previous instruments to achieve the necessary $\sim0.02$pc resolution in a low metallicity environment.  With JWST, this is now possible.
+
+The structure of low metallicity PDRs has critical implications for many areas of astrophysics. One of these is the potential creation of dominant layers of ``CO dark'' H$_2$ in low metallicity molecular clouds.  Carbon monoxide (CO) can be photodissociated to much greater depths in a cloud than H$_2$, which self-shields, leading to low metallicity clouds having far lower CO integrated intensity for a given molecular gas mass. At the same time, however, if the PDR itself is warmer, the ``CO bright'' region of the cloud may have distinctive characteristics at low metallicity.  Since CO remains one of our only tracers of molecular gas in distant galaxies, understanding the ``CO dark''/``CO bright'' boundary that occurs in PDRs is critical.  In cases were CO is truly unavailable, the only option is to directly observe the H$_2$ lines themselves, using well-motivated temperature distribution functions and the observed H$_2$ rotational ladder to infer the molecular mass (Togi \& Smith 2016).
+
+In this proposal, we aim to provide the first PDR benchmark for the low metallicity universe.  The high angular resolution and sensitivity of JWST enable observations of PDRs in the Magellanic Clouds at similar spatial scales to the canonical Tielens \& Hollenbach (1985) Orion Bar measurements.  Reproducing the spatial distribution of the H$_2$, CO and fine structure lines in Orion provides a baseline test for PDR models at low metallicity.  We will target a edge-on, simple PDR in the Small Magellanic Cloud (Z$\sim$0.1Z$_\odot$) using the NIRSPec and MIRI IFUs to provide coverage of the key near- to mid-IR PDR diagnostics, in particular the H$_2$ rotational and vibrational transitions.  Given knowledge of the stars, geometry and {\sc H~II} region properties, we can test the ability of various models to reproduce the spatial extent and temperature structure of the gas.  
+
+\vspace{0.1in}
+
+\noindent {\bf Why Target the PDR in N13?:} At the distance of the Small Magellanic Cloud, the MIRI and NIRSpec IFU resolution of between XX-XX\arcsec\ covers spatial resolution between XX-XX pc. This scale is sufficient to resolve the extent and layers of the Orion Bar PDR (see Figure~1).  This provides an entire galaxy worth of PDRs for us to choose from in the SMC---how do we select the best target? Our advantage in this process comes from extensive Hubble Space Telescope imaging of a region of the SW Bar of the SMC which lets us select a PDR with well characterized geometry and stellar populations.
+
+The key characteristics of a PDR that will make it a useful benchmark are:
+\begin{itemize}
+    \item A well characterized stellar population: In order to compare among PDR models, the input radiation field from the stars heating the PDR should be known.  The best case scenario involves a single or small number of key stars. Because massive stars that create {\sc HII} regions often occur in clusters, where crowding makes identifying individual stars more challenging, the ideal case like the Orion Bar is a small cluster with several OB stars.  
+    \item A known geometry: To dissect the PDR structure it should be as close to edge-on as possible to maximize the angular extent of the layers and to avoid blending between the gas diagnostics at different depths. In addition, the distance between the heating stars and the boundary of the PDR should be well known. The Orion Bar is thought to be a reasonably simple edge-on geometry located XX distance from $^1\theta$ Ori C.
+    \item Well characterized $n_e$ and 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   2. TECHNICAL JUSTIFICATION
+%       (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\justifyobservations   % Do not delete this command.
+% Enter your description of the observations.
+
+\noindent {\bf Scales to Resolve:}
+
+The structure of a PDR is set by the attenuation of UV photons.  Therefore, a useful way to describe the PDR is in Av.  We note that the relationship between UV and optical extinction may differ at low metallicity that in the MW but we proceed to describe the PDR with Av.  To first order the relationship between Av/NH should track the dust-to-gas ratio, which is a factor of $\sim7-10$ lower in the SMC than in the MW.  Therefore we use Av/NH $=7.6\times10^{-23}$ mag cm$^2$ H$^{-1}$ for the SMC.
+
+To get a sense of scale we can use the Av/NH and a density for the neutral gas to get a sense of the size of the transition region in parsecs.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Density & L($A_V = 0.1$) & L($A_V = 1$) & L($A_V=10$) \\
+\hline
+$n = 10^4$ cm$^{-3}$ & 0.04 pc & 0.4 pc & 4 pc \\
+ & 0.13\arcsec & 1.3\arcsec & 13\arcsec \\
+\hline
+\end{tabular}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   2a. SPECIAL REQUIREMENTS
+%        (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\specialreq             % Do not delete this command.
+% Justify your special requirements here, if any.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   2b. COORDINATED PARALLEL OBSERVATIONS
+%        (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\coordinatedobs % Do not delete this command.
+% Enter your coordinated parallel observing plans here, if any.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   2c. JUSTIFY DUPLICATIONS
+%        (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\duplications           % Do not delete this command.
+% Enter your duplication justifications here, if any.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   3. DATA PROCESSING AND ANALYSIS PLAN
+%       (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\analysisplan % Do not delete this command.
+% Describe the data processing and analysis plan here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   4. Management Plan
+%       (see https://jwst-docs.stsci.edu/display/JSP/JWST+Cycle+1+Proposal+Preparation)
+%
+%
+\managementplan % Do not delete this command.
+% Describe the data processing and analysis plan here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}          % End of proposal. Do not delete this line.
+                        % Everything after this command is ignored.
+
